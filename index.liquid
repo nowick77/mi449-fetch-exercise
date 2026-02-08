@@ -1,7 +1,19 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Javascript fetch exercise
 ---
+<div x-data="{ dogImg: '', catImg: '', loadingDog: false, loadingCat: false }">
+    <h1>Your random dog image:</h1>
+    <template x-if="dogImg">
+        <img :src="dogImg" alt="Random Dog" style="max-width: 300px; max-height: 300px;" />
+    </template>
+    <button @click="loadingDog = true; getRandomDogImage().then(url => { dogImg = url; loadingDog = false; })">Get Dog Image</button>
+    <span x-show="loadingDog">Loading...</span>
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+    <h1>Your random cat image:</h1>
+    <template x-if="catImg">
+        <img :src="catImg" alt="Random Cat" style="max-width: 300px; max-height: 300px;" />
+    </template>
+    <button @click="loadingCat = true; getRandomCatImage().then(url => { catImg = url; loadingCat = false; })">Get Cat Image</button>
+    <span x-show="loadingCat">Loading...</span>
+</div>

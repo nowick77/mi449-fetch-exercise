@@ -1,3 +1,19 @@
+/* AI generated styling */
+p.code-card, .code-card, .code-card code {
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    background: #23263a;
+    color: #eae8ff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 #0004;
+    padding: 24px 24px 16px 24px;
+    margin: 32px auto;
+    font-size: 1.1em;
+    overflow-x: auto;
+    display: block;
+    text-align: left;
+}
+/* End of AI styling */
+
 body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;
@@ -34,7 +50,7 @@ nav ul li a {
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 6em;
     letter-spacing: -2px;
 }
 
@@ -47,4 +63,27 @@ h1 strong {
 
 img.about {
     opacity: 0.5;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #EAE8FF;
+    background: #212431;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 20px auto;
+    width: 50%;
 }
